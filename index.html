@@ -124,7 +124,7 @@
         </ul>
         <ul>
             <li v-for="item in layout">
-                [x: {{ item.x }}, y: {{ item.y }}, w: {{ item.w }}, h: {{ item.h }}] {{ item.name }}
+                [x: {{ item.x }}, y: {{ item.y }}, w: {{ item.w }}, h: {{ item.h }}, fixed: <input type="checkbox" v-model="item.static">] {{ item.name }}
             </li>
         </ul>
     </div>
@@ -143,12 +143,12 @@
                     {"x":0,"y":0,"w":1,"h":2,"i":"0", static: false, name: 'Ranking'},
                     {"x":0,"y":2,"w":1,"h":1,"i":"1", static: false, name: 'Total Prize Pool'},
 
-                    {"x":1,"y":0,"w":2,"h":1,"i":"2", static: false, name: 'Timing'},
-                    {"x":1,"y":1,"w":1,"h":1,"i":"3", static: false, name: 'Blinks'},
-                    {"x":1,"y":2,"w":1,"h":1,"i":"4", static: false, name: 'Next Level'},
+                    {"x":1,"y":0,"w":2,"h":1,"i":"2", static: true, name: 'Timing'},
+                    {"x":1,"y":1,"w":1,"h":1,"i":"3", static: true, name: 'Blinks'},
+                    {"x":1,"y":2,"w":1,"h":1,"i":"4", static: true, name: 'Next Level'},
 
-                    {"x":2,"y":1,"w":1,"h":1,"i":"5", static: false, name: 'Ante'},
-                    {"x":2,"y":2,"w":1,"h":1,"i":"6", static: false, name: '(SB/BB(Ante))'},
+                    {"x":2,"y":1,"w":1,"h":1,"i":"5", static: true, name: 'Ante'},
+                    {"x":2,"y":2,"w":1,"h":1,"i":"6", static: true, name: '(SB/BB(Ante))'},
 
                     {"x":3,"y":0,"w":1,"h":1,"i":"7", static: false, name: 'Next Break In'},
                     {"x":3,"y":1,"w":1,"h":1,"i":"8", static: false, name: 'Avg Stack'},
