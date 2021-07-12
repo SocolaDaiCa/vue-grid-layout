@@ -113,7 +113,7 @@
                    :i="item.i"
         >
             <span class="text">{{itemTitle(item)}}</span>
-            <span class="remove" @click="removeItem(item.i)">x</span>
+            <span v-show="!item.static" class="remove" @click="removeItem(item.i)">x</span>
         </grid-item>
     </grid-layout>
     <div>
